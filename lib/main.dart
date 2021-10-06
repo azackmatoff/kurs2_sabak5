@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kurs2_sabak5/home_view.dart';
+import 'package:kurs2_sabak5/test_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: HomeView(),
+      home: TestView(),
     );
   }
 }
