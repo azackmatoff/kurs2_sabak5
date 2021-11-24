@@ -122,6 +122,8 @@ class Bread {
   Bread({this.shtuk});
 }
 
+// UI, Pages, Screens, Views
+
 class Money {
   int summa;
   Money({this.summa});
@@ -130,3 +132,22 @@ class Money {
 class BlackCola {}
 
 class BirinchiBarak {}
+
+class BulKlass {
+  bulFunksiya() {
+    //
+  }
+}
+
+class BulStateLessWidget extends StatelessWidget {
+  const BulStateLessWidget({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        child: Text(''),
+      ),
+    );
+  }
+}

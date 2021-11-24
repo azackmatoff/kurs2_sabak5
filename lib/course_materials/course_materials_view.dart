@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
-class TestView extends StatefulWidget {
-  const TestView({Key key}) : super(key: key);
+// const double bulConstPeremenniy = 5.5;
+// Sirtta bolso, const dep tuz koldono alasin
+
+class CourseMaterialsView extends StatefulWidget {
+  const CourseMaterialsView({Key key}) : super(key: key);
 
   @override
-  _TestViewState createState() => _TestViewState();
+  _CourseMaterialsViewState createState() => _CourseMaterialsViewState();
 }
 
-class _TestViewState extends State<TestView> {
+class _CourseMaterialsViewState extends State<CourseMaterialsView> {
   List<String> adamdar = [
     'Azamat',
     'Aygul',
@@ -21,7 +24,7 @@ class _TestViewState extends State<TestView> {
     'Akyl 2',
   ];
 
-  List<int> baalar = <int>[];
+  List<int> baalar = <int>[1, 232, 4];
 
   Person person1 = Person(name: 'Azamat', age: 38);
   Person person2 = Person(name: 'Aygul', age: 18);
@@ -36,9 +39,29 @@ class _TestViewState extends State<TestView> {
     persons.add(person3);
   }
 
+  dynamic bulDynamicPeremenniy;
+  var bulVarPeremenniy;
+  final int bulFinalPeremenniy = 12;
+  static const double bulConstPeremenniy = 5.5;
+
   @override
   void initState() {
     super.initState();
+    bulDynamicPeremenniy = 123.12;
+    bulVarPeremenniy = persons;
+
+    print('bulDynamicPeremenniy: ${bulDynamicPeremenniy.runtimeType}');
+    print('bulVarPeremenniy: ${bulVarPeremenniy.runtimeType}');
+
+    bulDynamicPeremenniy = person1;
+    bulVarPeremenniy = 1231;
+
+    print('2 bulDynamicPeremenniy: ${bulDynamicPeremenniy.runtimeType}');
+    print('2 bulVarPeremenniy: ${bulVarPeremenniy.runtimeType}');
+
+    // Bul ekoo kata beret, jani danniy bere albaybiz
+    // bulFinalPeremenniy = 12312;
+    // bulConstPeremenniy = 232.4;
 
     // for loop
     for (int i = 0; i < 100; i++) {
@@ -54,14 +77,14 @@ class _TestViewState extends State<TestView> {
       } else if (i == 11) {
         baalar.add(i);
       } else {
-        print('odd');
+        // print('odd');
       }
       // baalar.add(i * 2);
     }
 
-    print(baalar.length); // tizmede kancha nerse bar, shtuk
+    // print(baalar.length); // tizmede kancha nerse bar, shtuk
 
-    print(baalar);
+    // print(baalar);
 
     // final index = baalar.indexOf(68); // index in tabat, kanchanchi turganin tabat
 
